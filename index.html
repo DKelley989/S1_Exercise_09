@@ -55,8 +55,8 @@
             parties, <em>ever</em>. </p>
         <p>Required values are marked by an asterisk (*)</p>
 
-        <!-- Survey 1 -->
         <form id="survey" action="http://www.example.com/redball/survey" method="POST">
+            <!-- Survey 1 -->
             <fieldset id="custInfo">
                 <legend>Customer Information</legend>
 
@@ -98,3 +98,126 @@
                 <div class="formRow">
                     <label for="info">Where did you hear about us? <br> Select all that apply</label>
                     <select name="infoSrc" id="info" size="5" multiple>
+                        <option value="interent">Interent</option>
+                        <option value="mag">Magazine</option>
+                        <option value="news">Newspaper</option>
+                        <option value="word">Word of Mouth</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="formRow">
+                    <label for="dish">What's your favorite dish?</label>
+                    <input type="text" name="favDish" id="dish" list="dishType" />
+                    <datalist id="dishType">
+                        <option value="Antipasto Pizza" />
+                        <option value="Big Kahuna Pizza" />
+                        <option value="BBQ Chicken Pizza" />
+                        <option value="Mediterranean Herb Pizza" />
+                        <option value="Pasta Rolls" />
+                        <option value="Pesto Artichoke Pizza" />
+                    </datalist>
+                </div>
+
+                <div class="formRow">
+                    <label for="dineSpin">How many times do you dine out per month?</label>
+                    <input type="number" name="dineOut" id="dineSpin" value="1" step="1" min="0" max="20" />
+                </div>
+
+                <input type="checkbox" name="mailMe" id="mailCB" value="yes" />
+                <label for="mailCB">Add me to your mailing list for great coupons and specials!!!</label>
+            </fieldset>
+
+            <!-- Survey 2 -->
+            <fieldset id="expInfo">
+                <legend>Share Your Experience at Red Ball Pizza</legend>
+
+                <div class="formRow">
+                    <label for="visit">Date of visit</label>
+                    <input name="visitDate" id="visit" type="date">
+                </div>
+
+                <div class="formRow">
+                    <label for="order">Order type</label>
+                    <select name="orderType" id="order">
+                        <option value="order1">Carry out</option>
+                        <option value="order2">Delivery</option>
+                        <option value="order3" selected>Dine in</option>
+                        <option value="order4">Take 'n bake</option>
+                    </select>
+                </div>
+
+                <div class="formRow">
+                    <label>Was your service friendly?</label>
+                    <fieldset class="optGroup">
+                        <label for="fYes">Yes</label>
+                        <input type="radio" name="sFriend" id="fYes" value="Yes" />
+                        <label for="fNo">No</label>
+                        <input type="radio" name="sFriend" id="fNo" value="No" />
+                    </fieldset>
+                </div>
+
+                <div class="formRow">
+                    <label>Was your order correct?</label>
+                    <fieldset class="optGroup">
+                        <label for="cYes">Yes</label>
+                        <input type="radio" name="oCorrect" id="cYes" value="Yes" />
+                        <label for="cNo">No</label>
+                        <input type="radio" name="oCorrect" id="cNo" value="No" />
+                    </fieldset>
+                </div>
+
+                <div class="formRow">
+                    <label>Was your food hot?</label>
+                    <fieldset class="optGroup">
+                        <label for="hYes">Yes</label>
+                        <input type="radio" name="foodHot" id="hYes" value="Yes" />
+                        <label for="hNo">No</label>
+                        <input type="radio" name="foodHot" id="hNo" value="No" />
+                    </fieldset>
+                </div>
+
+                <div class="formRow">
+                    <label for="rangeBox">Rate the overall service <br>
+                        (0 = Poor ; 10 = Great)
+                    </label>
+                    0
+                    <input type="range" name="serviceRate" id="rangeBox" value="5" step="1" min="0" max="10" />
+                    10
+                </div>
+
+                <label for="comBox">Tell us more about your experience</label>
+                <textarea name="custExp" id="comBox"></textarea>
+            </fieldset>
+
+            <div id="buttons">
+                <input type="submit" value="Submit my Survey" />
+                <input type="reset" value="Cancel" />
+            </div>
+        </form>
+
+    </section>
+    <footer>
+        <h1>ORDER</h1>
+        <a href="#">Specials</a> <a href="#">Pizza</a> <a href="#">Pasta</a> <a href="#">Wings</a> <a href="#">Sides</a>
+        <a href="#">Salads</a> <a href="#">Drinks</a> <a href="#">Desserts</a>
+        <h1>ABOUT US</h1>
+        <a href="#">Our Story</a> <a href="#">Blog</a> <a href="#">Catering</a> <a href="#">School Lunches</a>
+        <h1>CUSTOMER SERVICE</h1>
+        <a href="#">Gluten Free Crusts</a> <a href="#">Contact Us</a> <a href="#">FAQs</a>
+        <h1>MY ACCOUNT</h1>
+        <a href="#">Create an Account</a> <a href="#">Sign In</a> <a href="#">Order Status</a>
+        <h1>NUTRITION</h1>
+        <a href="#">Nutrition Information</a> <a href="#">Food Allergen</a> <a href="#">Gluten Free Pizza</a>
+        <h1>POLICIES</h1>
+        <a href="#">Privacy Policy</a> <a href="#">Terms of Use</a>
+        <address>
+            Red Ball Pizza <br />
+            811 Beach Drive <br />
+            Ormond Beach, FL 32175 <br />
+            (386) 555 - 7499
+        </address>
+    </footer>
+</body>
+
+</html>
